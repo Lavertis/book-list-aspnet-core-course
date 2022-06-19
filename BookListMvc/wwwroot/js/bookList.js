@@ -7,9 +7,10 @@ $(document).ready(() => {
 function loadDataTable() {
     dataTable = $('#DT_load').DataTable({
         ajax: {
-            url: '/api/Book',
+            url: 'Book/GetAll',
             type: 'GET',
-            datatype: 'json'
+            datatype: 'json',
+            cache: true
         },
         columns: [
             {data: 'name', width: '20%'},
@@ -20,11 +21,11 @@ function loadDataTable() {
                 render: (data) => {
                     return `
                     <div class="text-center">
-                        <a href="/BookList/Upsert?id=${data}" class="btn btn-success">Edit</a>
-                        <a onclick="deleteBook('/api/Book?id=${data}')" class="btn btn-danger">Delete</a>
+                        <a href="/Book/Upsert?id=${data}" class="btn btn-success">Edit</a>
+                        <a onclick="deleteBook('/Book/Delete?id=${data}')" class="btn btn-danger">Delete</a>
                     </div>
                     `
-                }, width: '40%'
+                }, 'width': '40%'
             }
         ],
         language: {

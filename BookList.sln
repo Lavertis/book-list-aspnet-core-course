@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookListRazor", "BookListRazor\BookListRazor.csproj", "{32D2958F-1759-4C9F-9BB2-459E0185AB2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookListMvc", "BookListMvc\BookListMvc.csproj", "{1113B648-5377-4E4F-AD77-B6E76D18FAB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{32D2958F-1759-4C9F-9BB2-459E0185AB2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32D2958F-1759-4C9F-9BB2-459E0185AB2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32D2958F-1759-4C9F-9BB2-459E0185AB2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1113B648-5377-4E4F-AD77-B6E76D18FAB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1113B648-5377-4E4F-AD77-B6E76D18FAB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1113B648-5377-4E4F-AD77-B6E76D18FAB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1113B648-5377-4E4F-AD77-B6E76D18FAB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

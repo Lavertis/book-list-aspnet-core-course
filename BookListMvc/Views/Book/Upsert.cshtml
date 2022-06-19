@@ -1,0 +1,65 @@
+﻿@model Book
+
+@{
+    Layout = "_Layout";
+}
+
+<br/>
+<h2 class="text-info">@(Model.Id != 0 ? "Edit" : "Create")</h2>
+
+<div class="border container p-3">
+    <form method="post">
+        @if (Model.Id != 0)
+        {
+            <input type="hidden" asp-for="Id"/>
+        }
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+        <div class="input-group mb-3">
+            <div class="col-3">
+                <label asp-for="Name"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Name" class="form-control"/>
+            </div>
+            <span asp-validation-for="Name" class="text-danger my-auto ps-3"></span>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="col-3">
+                <label asp-for="Author"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Author" class="form-control"/>
+            </div>
+            <span asp-validation-for="Author" class="text-danger my-auto ps-3"></span>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="col-3">
+                <label asp-for="ISBN"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="ISBN" class="form-control"/>
+            </div>
+            <span asp-validation-for="ISBN" class="text-danger my-auto ps-3"></span>
+        </div>
+
+        <div class="input-group offset-3">
+            <div class="col-3 pe-3">
+                <button type="submit" class="btn btn-primary form-control">
+                    @(Model.Id != 0 ? "Update" : "Create")
+                </button>
+            </div>
+            <div class="col-3 ps-3">
+                <a asp-action="Index" class="btn btn-success form-control">Back to List</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial"/>
+}
